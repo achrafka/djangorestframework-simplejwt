@@ -259,7 +259,6 @@ class BlacklistMixin:
             exp = token["exp"]
 
             OutstandingToken.objects.create(
-                user=user,
                 jti=jti,
                 token=str(token),
                 created_at=token.current_time,
